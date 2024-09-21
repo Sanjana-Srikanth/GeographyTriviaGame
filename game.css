@@ -1,0 +1,186 @@
+:root{
+    background-color:rgb(166, 231, 175);
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#333;
+}
+
+h1,
+h2,
+h3,
+h4{
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: #0c551b;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+/* CONTAINER class set-up*/ 
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    /* allows for centering text on the page vertically and horizontally */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+
+    max-width: 80rem; 
+    /* re-centers content when there is a pop-up to the left or right, keeping it auto-aligned */
+    margin: 0 auto; 
+    padding: 2rem;
+    text-align: center;
+    
+
+}
+
+.container > * {
+    /* ensures we can still center things horizontally */
+    width: 100%;
+}
+
+/* produces a flex box and sets the direction to "column"--this means by default the flex box direction will be
+vertical, allowing us to stack things on top of each other on the screen(ex. like the buttons) */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+.flex-row{
+    display:flex;
+    flex-direction:row;
+}
+
+/* USER INPUT BAR*/
+#user-input {
+    margin-right: 1rem; /* space between input and button */
+    padding: 1.2rem; /* increased padding */
+    border: 1px solid #5024a1; /* border color */
+    border-radius: 12px; /* rounded corners */
+    font-size: 1.6rem; /* font size */
+    width: 30rem; /* increased width */
+    margin-bottom: 2rem;
+}
+
+/* QUESTIONS DISPLAY*/
+#question-container {
+    font-size: 2.4rem; /* increase the font size */
+    margin-bottom: 2rem; /* add some space below the question */
+    text-align: center; /* center the text if needed */
+}
+
+/* RESULT MESSAGE */
+#result-message {
+    font-size: 2.4rem; /* increase the font size */
+    margin-bottom: 2rem; /* add some space below the question */
+    text-align: center; /* center the text if needed */
+}
+
+/* SCORE DISPLAY */
+#score-container {
+    font-size: 2.4rem; /* increase the font size */
+    margin-bottom: 2rem; /* optional: Add some space below the question */
+    margin-right: 40px;
+    margin-left: 100px;
+    text-align: left; /* center the text if needed */
+}
+
+
+/* HINT DISPLAY */
+#hint-container {
+    font-size: 2.4rem; /* increase the font size */
+    margin-bottom: 2rem; /* optional: Add some space below the question */
+    margin-right: 100px;
+    margin-left: 40px;
+    text-align: center; /* center the text if needed */
+}
+
+/* HINT world display */
+#display-word {
+    font-size: 2.4rem; /* increase the font size */
+    margin-bottom: 2rem; /* optional: Add some space below the question */
+    text-align: center; /* center the text if needed */
+}
+
+#timer-container{
+    font-size: 1.4rem; /* increase the font size */
+    margin-bottom: 2rem; /* optional: Add some space below the question */
+    text-align: center; /* center the text if needed */
+
+}
+
+
+/* BUTTONS */
+.btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #0c551b;
+    margin-bottom: 1rem;
+    /* text-decoration is set to none because by default anchor tags are underlined */
+    text-decoration: none; 
+    color: #0c551b;
+    background-color:white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #0c551b;
+    /* moves the button up slightly when hovered over*/
+    transform: translateY(-0.1rem);
+    /* spanning the transition to move the button up over a short period of time */
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* rounds the buttons for a smoother look */
+.btn {border-radius: 12px;}

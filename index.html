@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="container">
+        <div id="home" class="flex-center flex-column"></div>
+        <h1>Geography Quiz</h1>
+            <div id="timer-container">Time Left: <span id="timer">20</span> seconds</div>
+            <div id="question-container"></div>
+                 <div id="score-hint-container" class="flex-row">
+                    <div id="score-container">Score: <span id="score">0</span></div>
+                    <input type="text" id="user-input" placeholder="Type your answer here..." />
+                    <div id="hint-container">Hint: <span id="hintDisplay">5</span></div>
+                </div>
+                 <button id="submit-answer" class="btn">Submit Answer</button>
+                 <button id="hint" class="btn">Hint</button>
+                 <button id="replay" class="btn">Play Again</button>
+                 <div id="display-word">*******</div>
+                 <p id="result-message"></p>
+                 <p id="score-display"></p>
+                 
+    
+    <script src="script.js"></script>
+</body>
+</html>
